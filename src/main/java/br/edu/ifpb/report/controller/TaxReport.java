@@ -2,15 +2,15 @@ package br.edu.ifpb.report.controller;
 
 import br.edu.ifpb.report.database.MysqlDatabaseConnector;
 
-public class TaxReport {
+public class TaxReport extends AbstractReport{
 
     private MysqlDatabaseConnector connector = new MysqlDatabaseConnector();
 
-    public void generate() {
+    /* public void generate() {
         createDatabaseConnection();
         executeMySQLQuery();
         convertToPDF();
-    }
+    } */
 
     public void createDatabaseConnection() {
         System.out.println("Creating Database Connection...");

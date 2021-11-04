@@ -2,9 +2,14 @@ package br.edu.ifpb.report.controller;
 
 import br.edu.ifpb.report.database.PostgreSQLDatabaseConnector;
 
-public class ExpenseReport {
+public class ExpenseReport extends AbstractTemplate{
+    
+    
+    public PostgreSQLDatabaseConnector connector(){
+        return new PostgreSQLDatabaseConnector();
 
-    private PostgreSQLDatabaseConnector connector = new PostgreSQLDatabaseConnector();
+    }
+    /* private PostgreSQLDatabaseConnector connector = new PostgreSQLDatabaseConnector(); */
 
    /*  public void generate() {
         createDatabaseConnection();
@@ -14,13 +19,13 @@ public class ExpenseReport {
 
     public void createDatabaseConnection() {
         System.out.println("Creating Database Connection...");
-        connector.createConnection();
+        connector().openConnection();
     }
 
     public void executePostgresQuery() {
         System.out.println("Executing Postgres Query...");
         String query = "SELECT * FROM expenses";
-        connector.runQuery(query);
+        connector().executeQuery(query);
     }
 
     public void convertToXLS() {
