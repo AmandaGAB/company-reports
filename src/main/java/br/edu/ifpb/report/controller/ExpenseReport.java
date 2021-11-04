@@ -6,11 +6,11 @@ public class ExpenseReport {
 
     private PostgreSQLDatabaseConnector connector = new PostgreSQLDatabaseConnector();
 
-    public void generate() {
+   /*  public void generate() {
         createDatabaseConnection();
         executePostgresQuery();
         convertToXLS();
-    }
+    } */
 
     public void createDatabaseConnection() {
         System.out.println("Creating Database Connection...");
