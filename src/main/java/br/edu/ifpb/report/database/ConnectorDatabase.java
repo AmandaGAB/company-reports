@@ -1,7 +1,7 @@
 package br.edu.ifpb.report.database;
 
-public interface Connector {
-    public void openConnection();
-    public void executeQuery(String query);
+public interface ConnectorDatabase {
+     void openConnection();
+     void executeQuery(String query);
 
 }

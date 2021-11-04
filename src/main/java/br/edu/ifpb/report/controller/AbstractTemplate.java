@@ -1,6 +1,7 @@
 package br.edu.ifpb.report.controller;
 
 
+
 public abstract class AbstractTemplate{
 
     
@@ -10,10 +11,11 @@ public abstract class AbstractTemplate{
         executeQuery();
         convertToThis();
     }
-    public abstract void ConnectorDatabase connector();
-    public abstract void createDatabaseConnection();
-    public abstract void executeQuery();
-    public abstract void convertToThis();
+
+
+    abstract void createDatabaseConnection();
+    abstract void executeQuery();
+    abstract void convertToThis();
 
 
 

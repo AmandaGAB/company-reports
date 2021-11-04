@@ -22,13 +22,13 @@ public class ExpenseReport extends AbstractTemplate{
         connector().openConnection();
     }
 
-    public void executePostgresQuery() {
+    public void executeQuery() {
         System.out.println("Executing Postgres Query...");
         String query = "SELECT * FROM expenses";
         connector().executeQuery(query);
     }
 
-    public void convertToXLS() {
+    public void convertToThis() {
         System.out.println("Converting To XLS...");
     }
 
